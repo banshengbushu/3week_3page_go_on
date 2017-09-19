@@ -101,35 +101,52 @@ body {
       display: flex; }
 
 /*medium*/
-@media screen and (min-width: 650px) and (max-width: 850px) {
+@media screen and (min-width: 550px) and (max-width: 850px) {
   body .container {
     flex-direction: column; }
     body .container .nav {
       display: flex;
       flex-direction: row;
       align-items: center;
-      width: 100%; }
+      width: 135%; }
       body .container .nav .logo {
         margin: 30px 30px 30px 0; }
-      body .container .nav .panel .panel_main img {
-        width: 141%; } }
+      body .container .nav .list {
+        display: flex; }
+        body .container .nav .list li {
+          margin-right: 10px; }
+    body .container .panel .panel_main img {
+      width: 140%; }
+    body .container .panel .panel_desc .subscribe {
+      width: 135%; }
+    body .container .panel .panel_desc .foodList {
+      width: 140%; }
+  body footer {
+    width: 135%; } }
 /*small*/
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 540px) {
   body {
     display: flex;
-    justify-content: center;
-    margin-left: 200px; }
+    justify-content: flex-start; }
     body .container {
       flex-direction: column; }
       body .container .nav {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 100%;
-        border-bottom: 1px solid #eee;
-        li-i-display: none; }
+        flex-direction: column;
+        width: 135%;
+        align-items: center; }
         body .container .nav .logo {
-          margin: 30px 30px 30px 0; }
+          width: 100px;
+          height: 100px;
+          margin: 30px 30px 30px 0;
+          order: 2; }
+        body .container .nav .list {
+          display: flex;
+          flex-direction: row;
+          border-bottom: 1px solid #eee; }
+          body .container .nav .list li {
+            margin-right: 20px; }
+            body .container .nav .list li i {
+              display: none; }
       body .container .panel .panel_main {
         height: 400px; }
       body .container .panel .panel_desc .foodList {
