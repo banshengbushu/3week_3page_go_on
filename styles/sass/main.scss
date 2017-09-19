@@ -43,6 +43,7 @@ body {
 
       .logo {
         height: 100px;
+        margin: 30px;
       }
 
       li {
@@ -172,41 +173,80 @@ body {
       display: flex;
     }
   }
+}
 
-  /*medium*/
-  @media screen and (min-width: 768px) and (max-width: 1024px) {
-    body {
-      justify-content: space-around;
+/*medium*/
+@media screen and (min-width: 650px) and (max-width: 850px) {
+  body {
+    .container {
+      flex-direction: column;
 
-      .container {
-        .nav {
-          display: flex;
-          flex-direction: row;
+      .nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+
+        .logo {
+          margin: 30px 30px 30px 0;
+        }
+
+        .panel{
+          .panel_main{
+            img{
+              width: 141%;
+            }
+          }
         }
       }
     }
-
-    .panel {
-      display: flex;
-      flex-direction: column;
-    }
-
   }
+}
 
-  /*small*/
-  @media screen and (max-width: 750px) {
-    body {
+/*small*/
+@media screen and (max-width: 600px) {
+  body {
+    display: flex;
+    justify-content: center;
+    margin-left: 200px;
+
+    .container {
       flex-direction: column;
 
-      ul {
-        justify-content: space-around
+      .nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        border-bottom: 1px solid #eee;
+
+          li:{
+            i:{
+              display:none;
+            }
+        }
+
+        .logo {
+          margin: 30px 30px 30px 0;
+        }
       }
 
-      .subscribe {
-        flex-wrap: wrap;
+      .panel {
+        .panel_main {
+          height: 400px;
+        }
+
+        .panel_desc {
+          .foodList {
+            flex-direction: column;
+            align-items: center;
+            li{
+              width: 70%;
+            }
+          }
+        }
       }
+
     }
-
   }
-
 }

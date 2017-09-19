@@ -1,8 +1,6 @@
 body {
   font-family: italic-alpha;
-  margin: 50px 200px;
-  /*medium*/
-  /*small*/ }
+  margin: 50px 200px; }
   body ul, body p {
     margin: 0;
     padding: 0; }
@@ -24,7 +22,8 @@ body {
       flex-direction: column;
       margin-right: 50px; }
       body .container .nav .logo {
-        height: 100px; }
+        height: 100px;
+        margin: 30px; }
       body .container .nav li {
         margin: 20px 0; }
         body .container .nav li .iconfont {
@@ -100,21 +99,43 @@ body {
       font-size: 2em;
       color: #999999;
       display: flex; }
-  @media screen and (min-width: 768px) and (max-width: 1024px) {
-    body body {
-      justify-content: space-around; }
-      body body .container .nav {
-        display: flex;
-        flex-direction: row; }
-    body .panel {
+
+/*medium*/
+@media screen and (min-width: 650px) and (max-width: 850px) {
+  body .container {
+    flex-direction: column; }
+    body .container .nav {
       display: flex;
-      flex-direction: column; } }
-  @media screen and (max-width: 750px) {
-    body body {
+      flex-direction: row;
+      align-items: center;
+      width: 100%; }
+      body .container .nav .logo {
+        margin: 30px 30px 30px 0; }
+      body .container .nav .panel .panel_main img {
+        width: 141%; } }
+/*small*/
+@media screen and (max-width: 600px) {
+  body {
+    display: flex;
+    justify-content: center;
+    margin-left: 200px; }
+    body .container {
       flex-direction: column; }
-      body body ul {
-        justify-content: space-around; }
-      body body .subscribe {
-        flex-wrap: wrap; } }
+      body .container .nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        border-bottom: 1px solid #eee;
+        li-i-display: none; }
+        body .container .nav .logo {
+          margin: 30px 30px 30px 0; }
+      body .container .panel .panel_main {
+        height: 400px; }
+      body .container .panel .panel_desc .foodList {
+        flex-direction: column;
+        align-items: center; }
+        body .container .panel .panel_desc .foodList li {
+          width: 70%; } }
 
 /*# sourceMappingURL=main.css.map */
